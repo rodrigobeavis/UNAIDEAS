@@ -25,9 +25,6 @@ namespace unaideasD.Models
         public DbSet<Projeto> Projetoes { get; set; }
         public DbSet<Qualificacao> Qualificacaos { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
-        public DbSet<TelefoneInvestidor> TelefoneInvestidors { get; set; }
-        public DbSet<TelefoneProfessor> TelefoneProfessors { get; set; }
-        public DbSet<TelefoneUsuario> TelefoneUsuarios { get; set; }
         public DbSet<Turma> Turmas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
@@ -42,9 +39,6 @@ namespace unaideasD.Models
             modelBuilder.Configurations.Add(new ProjetoMap());
             modelBuilder.Configurations.Add(new QualificacaoMap());
             modelBuilder.Configurations.Add(new sysdiagramMap());
-            modelBuilder.Configurations.Add(new TelefoneInvestidorMap());
-            modelBuilder.Configurations.Add(new TelefoneProfessorMap());
-            modelBuilder.Configurations.Add(new TelefoneUsuarioMap());
             modelBuilder.Configurations.Add(new TurmaMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
         }

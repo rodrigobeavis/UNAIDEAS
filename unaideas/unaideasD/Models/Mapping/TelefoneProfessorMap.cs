@@ -13,7 +13,7 @@ namespace unaideasD.Models.Mapping
             // Properties
             this.Property(t => t.telefone_professor)
                 .IsRequired()
-                .HasMaxLength(150);
+                .HasMaxLength(20);
 
             // Table & Column Mappings
             this.ToTable("TelefoneProfessor");

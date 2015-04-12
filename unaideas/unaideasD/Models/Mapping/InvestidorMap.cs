@@ -23,6 +23,10 @@ namespace unaideasD.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(150);
 
+            this.Property(t => t.telefone_investidor)
+                .IsRequired()
+                .HasMaxLength(20);
+
             // Table & Column Mappings
             this.ToTable("Investidor");
             this.Property(t => t.id_investidor).HasColumnName("id_investidor");
@@ -32,6 +36,7 @@ namespace unaideasD.Models.Mapping
             this.Property(t => t.email_investidor).HasColumnName("email_investidor");
             this.Property(t => t.id_entidade_ensino).HasColumnName("id_entidade_ensino");
             this.Property(t => t.id_autenticacao).HasColumnName("id_autenticacao");
+            this.Property(t => t.telefone_investidor).HasColumnName("telefone_investidor");
 
             // Relationships
             this.HasRequired(t => t.Autenticacao)

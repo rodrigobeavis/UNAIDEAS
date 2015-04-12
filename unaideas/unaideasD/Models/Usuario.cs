@@ -8,7 +8,6 @@ namespace unaideasD.Models
         public Usuario()
         {
             this.Equipes = new List<Equipe>();
-            this.TelefoneUsuarios = new List<TelefoneUsuario>();
         }
 
         public long id_usuario { get; set; }
@@ -18,9 +17,9 @@ namespace unaideasD.Models
         public string email { get; set; }
         public long id_turma { get; set; }
         public long id_autenticacao { get; set; }
+        public string telefone_usuario { get; set; }
         public virtual Autenticacao Autenticacao { get; set; }
         public virtual ICollection<Equipe> Equipes { get; set; }
-        public virtual ICollection<TelefoneUsuario> TelefoneUsuarios { get; set; }
         public virtual Turma Turma { get; set; }
     }
 }

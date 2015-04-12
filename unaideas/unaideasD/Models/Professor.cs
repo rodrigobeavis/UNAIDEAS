@@ -9,7 +9,6 @@ namespace unaideasD.Models
         {
             this.DisciplinaProfessors = new List<DisciplinaProfessor>();
             this.Qualificacaos = new List<Qualificacao>();
-            this.TelefoneProfessors = new List<TelefoneProfessor>();
             this.Turmas = new List<Turma>();
         }
 
@@ -19,10 +18,11 @@ namespace unaideasD.Models
         public string nome_professor { get; set; }
         public string tipo_professor { get; set; }
         public long id_autenticacao { get; set; }
+        public string telefone_professor { get; set; }
+        public string disciplinas_professor { get; set; }
         public virtual Autenticacao Autenticacao { get; set; }
         public virtual ICollection<DisciplinaProfessor> DisciplinaProfessors { get; set; }
         public virtual ICollection<Qualificacao> Qualificacaos { get; set; }
-        public virtual ICollection<TelefoneProfessor> TelefoneProfessors { get; set; }
         public virtual ICollection<Turma> Turmas { get; set; }
     }
 }

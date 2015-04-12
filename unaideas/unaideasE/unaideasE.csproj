@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}</ProjectGuid>
+    <ProjectGuid>{C94F9F8E-CBD0-49AD-9BA9-6EB7E3666E8D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>unaideasD</RootNamespace>
-    <AssemblyName>unaideasD</AssemblyName>
+    <RootNamespace>unaideasE</RootNamespace>
+    <AssemblyName>unaideasE</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -162,36 +162,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Autenticacao.cs" />
-    <Compile Include="Models\DisciplinaProfessor.cs" />
-    <Compile Include="Models\EntidadeDeEnsino.cs" />
-    <Compile Include="Models\Equipe.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Investidor.cs" />
-    <Compile Include="Models\Mapping\AutenticacaoMap.cs" />
-    <Compile Include="Models\Mapping\DisciplinaProfessorMap.cs" />
-    <Compile Include="Models\Mapping\EntidadeDeEnsinoMap.cs" />
-    <Compile Include="Models\Mapping\EquipeMap.cs" />
-    <Compile Include="Models\Mapping\InvestidorMap.cs" />
-    <Compile Include="Models\Mapping\ProfessorMap.cs" />
-    <Compile Include="Models\Mapping\ProjetoMap.cs" />
-    <Compile Include="Models\Mapping\QualificacaoMap.cs" />
-    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
-    <Compile Include="Models\Mapping\TelefoneInvestidorMap.cs" />
-    <Compile Include="Models\Mapping\TelefoneProfessorMap.cs" />
-    <Compile Include="Models\Mapping\TelefoneUsuarioMap.cs" />
-    <Compile Include="Models\Mapping\TurmaMap.cs" />
-    <Compile Include="Models\Mapping\UsuarioMap.cs" />
-    <Compile Include="Models\Professor.cs" />
-    <Compile Include="Models\Projeto.cs" />
-    <Compile Include="Models\Qualificacao.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
-    <Compile Include="Models\TelefoneInvestidor.cs" />
-    <Compile Include="Models\TelefoneProfessor.cs" />
-    <Compile Include="Models\TelefoneUsuario.cs" />
-    <Compile Include="Models\Turma.cs" />
-    <Compile Include="Models\unaideasbdContext.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -221,7 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

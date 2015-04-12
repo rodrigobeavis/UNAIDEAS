@@ -11,7 +11,7 @@ namespace unaideasD.Models.Mapping
             this.HasKey(t => t.id_qualificacao);
 
             // Properties
-            this.Property(t => t.tipo_qualificacao)
+            this.Property(t => t.obs_qualificacao)
                 .IsRequired()
                 .HasMaxLength(200);
 
@@ -19,9 +19,10 @@ namespace unaideasD.Models.Mapping
             this.ToTable("Qualificacao");
             this.Property(t => t.id_qualificacao).HasColumnName("id_qualificacao");
             this.Property(t => t.data_hora_qualificacao).HasColumnName("data_hora_qualificacao");
-            this.Property(t => t.tipo_qualificacao).HasColumnName("tipo_qualificacao");
+            this.Property(t => t.obs_qualificacao).HasColumnName("obs_qualificacao");
             this.Property(t => t.id_professor).HasColumnName("id_professor");
             this.Property(t => t.id_projeto).HasColumnName("id_projeto");
+            this.Property(t => t.valor_qualificacao).HasColumnName("valor_qualificacao");
 
             // Relationships
             this.HasRequired(t => t.Professor)
