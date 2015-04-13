@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("~/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/css/starter-template.css")" rel="stylesheet">
+    <!-- css -->
+    <link href="~/css/estilo.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="UNAIDEAS painel" />
+</head>
+    <body>
+        <img src="~/img/barra-superior-home.png" id="barra-superior">
+
+        <img src="~/img/una-ideas-logo.png" id="logo-una-ideas">
+
+        <nav id="menu">
+            <ul>
+                <!--<li>Início</li>
+                <li>Cadastrar</li>-->
+                <li>Sobre</li>
+                <li style="height: 30px; top:100px;"><span style="font-size:20pt; vertical-align:top">Fale conosco</span></li>
+            </ul>
+        </nav>
+        @RenderBody()
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="@Url.Content("~/js/bootstrap.js")"></script>
+    </body>
+</html>
