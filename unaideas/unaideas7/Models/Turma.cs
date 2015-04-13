@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
@@ -9,7 +10,7 @@ namespace unaideas7.Models
         {
             this.Usuarios = new List<Usuario>();
         }
-
+        [Key]
         public long id_turma { get; set; }
         public string nome_turma { get; set; }
         public string periodo_turma { get; set; }

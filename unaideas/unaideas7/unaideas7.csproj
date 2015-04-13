@@ -158,18 +158,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Context\ApplicationDataContext.cs" />
+    <Compile Include="Controllers\AutenticacaosController.cs" />
+    <Compile Include="Controllers\EntidadeDeEnsinoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvestidorsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfessorsController.cs" />
+    <Compile Include="Controllers\ProjetoesController.cs" />
+    <Compile Include="Controllers\TurmasController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Autenticacao.cs" />
-    <Compile Include="Models\DisciplinaProfessor.cs" />
     <Compile Include="Models\EntidadeDeEnsino.cs" />
     <Compile Include="Models\Equipe.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Investidor.cs" />
     <Compile Include="Models\Mapping\AutenticacaoMap.cs" />
-    <Compile Include="Models\Mapping\DisciplinaProfessorMap.cs" />
     <Compile Include="Models\Mapping\EntidadeDeEnsinoMap.cs" />
     <Compile Include="Models\Mapping\EquipeMap.cs" />
     <Compile Include="Models\Mapping\InvestidorMap.cs" />
@@ -217,6 +223,14 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-2.1.3.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -228,10 +242,41 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Investidors\Create.cshtml" />
+    <Content Include="Views\Investidors\Delete.cshtml" />
+    <Content Include="Views\Investidors\Details.cshtml" />
+    <Content Include="Views\Investidors\Edit.cshtml" />
+    <Content Include="Views\Investidors\Index.cshtml" />
+    <Content Include="Views\Professors\Create.cshtml" />
+    <Content Include="Views\Professors\Delete.cshtml" />
+    <Content Include="Views\Professors\Details.cshtml" />
+    <Content Include="Views\Professors\Edit.cshtml" />
+    <Content Include="Views\Professors\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Projetoes\Create.cshtml" />
+    <Content Include="Views\Projetoes\Delete.cshtml" />
+    <Content Include="Views\Projetoes\Details.cshtml" />
+    <Content Include="Views\Projetoes\Edit.cshtml" />
+    <Content Include="Views\Projetoes\Index.cshtml" />
+    <Content Include="Views\EntidadeDeEnsinoes\Create.cshtml" />
+    <Content Include="Views\EntidadeDeEnsinoes\Delete.cshtml" />
+    <Content Include="Views\EntidadeDeEnsinoes\Details.cshtml" />
+    <Content Include="Views\EntidadeDeEnsinoes\Edit.cshtml" />
+    <Content Include="Views\EntidadeDeEnsinoes\Index.cshtml" />
+    <Content Include="Views\Autenticacaos\Create.cshtml" />
+    <Content Include="Views\Autenticacaos\Delete.cshtml" />
+    <Content Include="Views\Autenticacaos\Details.cshtml" />
+    <Content Include="Views\Autenticacaos\Edit.cshtml" />
+    <Content Include="Views\Autenticacaos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Qualificacao\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -250,7 +295,22 @@
     <Content Include="fonts\BebasNeue.otf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Projetos\Projetos.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turmas\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turmas\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turmas\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turmas\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Turmas\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

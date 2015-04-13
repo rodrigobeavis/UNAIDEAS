@@ -1,0 +1,66 @@
+﻿@model unaideas7.Models.Projeto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Projeto</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id_projeto)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tipo_projeto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tipo_projeto)
+                @Html.ValidationMessageFor(model => model.tipo_projeto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tema_projeto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tema_projeto)
+                @Html.ValidationMessageFor(model => model.tema_projeto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.palavras_chave_projeto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.palavras_chave_projeto)
+                @Html.ValidationMessageFor(model => model.palavras_chave_projeto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.resumo_projeto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.resumo_projeto)
+                @Html.ValidationMessageFor(model => model.resumo_projeto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
@@ -9,7 +10,7 @@ namespace unaideas7.Models
         {
             this.Equipes = new List<Equipe>();
         }
-
+        [Key]
         public long id_usuario { get; set; }
         public string rg_usuario { get; set; }
         public string ra_usuario { get; set; }

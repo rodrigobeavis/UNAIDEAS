@@ -1,0 +1,74 @@
+﻿@model unaideas7.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Autenticacao.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autenticacao.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Turma.nome_turma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Turma.nome_turma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rg_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rg_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ra_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ra_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone_usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_usuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

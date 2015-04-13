@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
@@ -10,7 +11,7 @@ namespace unaideas7.Models
             this.Investidors = new List<Investidor>();
             this.Turmas = new List<Turma>();
         }
-
+        [Key]
         public long id_entidade_ensino { get; set; }
         public string nome_entidade_ensino { get; set; }
         public string descricao_entidade_ensino { get; set; }

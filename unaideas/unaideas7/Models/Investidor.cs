@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
     public partial class Investidor
     {
+        [Key]
         public long id_investidor { get; set; }
         public string nome_investidor { get; set; }
         public string rg_investidor { get; set; }

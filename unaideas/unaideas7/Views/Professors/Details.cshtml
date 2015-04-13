@@ -1,0 +1,74 @@
+﻿@model unaideas7.Models.Professor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Autenticacao.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autenticacao.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mat_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mat_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.disciplinas_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.disciplinas_professor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_professor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

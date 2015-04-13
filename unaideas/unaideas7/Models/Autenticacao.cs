@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
@@ -11,7 +12,7 @@ namespace unaideas7.Models
             this.Professors = new List<Professor>();
             this.Usuarios = new List<Usuario>();
         }
-
+        [Key]
         public long id_autenticacao { get; set; }
         public string login { get; set; }
         public string pw { get; set; }

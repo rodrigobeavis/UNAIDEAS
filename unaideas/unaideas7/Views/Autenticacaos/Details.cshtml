@@ -1,0 +1,50 @@
+﻿@model unaideas7.Models.Autenticacao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autenticacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.area_user)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.area_user)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.acesso_user)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acesso_user)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_autenticacao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

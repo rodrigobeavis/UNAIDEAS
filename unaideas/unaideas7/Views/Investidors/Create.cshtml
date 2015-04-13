@@ -1,0 +1,88 @@
+﻿@model unaideas7.Models.Investidor
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Investidor</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.nome_investidor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nome_investidor)
+                @Html.ValidationMessageFor(model => model.nome_investidor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.rg_investidor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.rg_investidor)
+                @Html.ValidationMessageFor(model => model.rg_investidor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cod_investidor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cod_investidor)
+                @Html.ValidationMessageFor(model => model.cod_investidor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.email_investidor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email_investidor)
+                @Html.ValidationMessageFor(model => model.email_investidor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_entidade_ensino, "id_entidade_ensino", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_entidade_ensino", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_entidade_ensino)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_autenticacao, "id_autenticacao", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_autenticacao", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_autenticacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.telefone_investidor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.telefone_investidor)
+                @Html.ValidationMessageFor(model => model.telefone_investidor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

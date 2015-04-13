@@ -14,5 +14,19 @@ namespace unaideas7.Context
         { }
 
         public System.Data.Entity.DbSet<AppUser> AppUsers { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Turma> Turmas { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.EntidadeDeEnsino> EntidadeDeEnsinoes { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Professor> Professors { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Investidor> Investidors { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Autenticacao> Autenticacaos { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Usuario> Usuarios { get; set; }
+
+        public System.Data.Entity.DbSet<unaideas7.Models.Projeto> Projetoes { get; set; }
     }
 }

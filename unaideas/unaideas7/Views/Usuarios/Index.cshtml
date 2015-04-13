@@ -1,0 +1,69 @@
+﻿@model IEnumerable<unaideas7.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Autenticacao.login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Turma.nome_turma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rg_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ra_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone_usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autenticacao.login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Turma.nome_turma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rg_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ra_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone_usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_usuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_usuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_usuario })
+        </td>
+    </tr>
+}
+
+</table>

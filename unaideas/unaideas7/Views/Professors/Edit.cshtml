@@ -1,0 +1,90 @@
+﻿@model unaideas7.Models.Professor
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Professor</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id_professor)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.mat_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.mat_professor)
+                @Html.ValidationMessageFor(model => model.mat_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.email_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email_professor)
+                @Html.ValidationMessageFor(model => model.email_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nome_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nome_professor)
+                @Html.ValidationMessageFor(model => model.nome_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tipo_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tipo_professor)
+                @Html.ValidationMessageFor(model => model.tipo_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_autenticacao, "id_autenticacao", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_autenticacao", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_autenticacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.telefone_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.telefone_professor)
+                @Html.ValidationMessageFor(model => model.telefone_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.disciplinas_professor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.disciplinas_professor)
+                @Html.ValidationMessageFor(model => model.disciplinas_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

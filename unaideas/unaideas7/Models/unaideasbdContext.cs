@@ -17,7 +17,6 @@ namespace unaideas7.Models
         }
 
         public DbSet<Autenticacao> Autenticacaos { get; set; }
-        public DbSet<DisciplinaProfessor> DisciplinaProfessors { get; set; }
         public DbSet<EntidadeDeEnsino> EntidadeDeEnsinoes { get; set; }
         public DbSet<Equipe> Equipes { get; set; }
         public DbSet<Investidor> Investidors { get; set; }
@@ -31,7 +30,6 @@ namespace unaideas7.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AutenticacaoMap());
-            modelBuilder.Configurations.Add(new DisciplinaProfessorMap());
             modelBuilder.Configurations.Add(new EntidadeDeEnsinoMap());
             modelBuilder.Configurations.Add(new EquipeMap());
             modelBuilder.Configurations.Add(new InvestidorMap());

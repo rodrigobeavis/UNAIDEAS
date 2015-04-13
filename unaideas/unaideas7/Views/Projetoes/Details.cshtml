@@ -1,0 +1,50 @@
+﻿@model unaideas7.Models.Projeto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Projeto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_projeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_projeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tema_projeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tema_projeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.palavras_chave_projeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.palavras_chave_projeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resumo_projeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resumo_projeto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_projeto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

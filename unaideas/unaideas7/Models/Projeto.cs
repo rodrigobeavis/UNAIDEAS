@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace unaideas7.Models
 {
@@ -10,7 +11,7 @@ namespace unaideas7.Models
             this.Equipes = new List<Equipe>();
             this.Qualificacaos = new List<Qualificacao>();
         }
-
+        [Key]
         public long id_projeto { get; set; }
         public string tipo_projeto { get; set; }
         public string tema_projeto { get; set; }
