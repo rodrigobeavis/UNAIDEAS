@@ -1,0 +1,72 @@
+﻿@model unaideas7.Models.Turma
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Turma</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.nome_turma, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nome_turma)
+                @Html.ValidationMessageFor(model => model.nome_turma)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.periodo_turma, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.periodo_turma)
+                @Html.ValidationMessageFor(model => model.periodo_turma)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_entidade_ensino, "id_entidade_ensino", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_entidade_ensino", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_entidade_ensino)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_professor, "id_professor", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_professor", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ano_turma, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ano_turma)
+                @Html.ValidationMessageFor(model => model.ano_turma)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

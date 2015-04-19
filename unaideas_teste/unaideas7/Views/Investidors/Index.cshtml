@@ -1,0 +1,69 @@
+﻿@model IEnumerable<unaideas7.Models.Investidor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Autenticacao.login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntidadeDeEnsino.nome_entidade_ensino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome_investidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rg_investidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cod_investidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_investidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone_investidor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autenticacao.login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntidadeDeEnsino.nome_entidade_ensino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome_investidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rg_investidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cod_investidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_investidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone_investidor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_investidor }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_investidor }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_investidor })
+        </td>
+    </tr>
+}
+
+</table>

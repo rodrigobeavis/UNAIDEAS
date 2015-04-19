@@ -1,0 +1,72 @@
+﻿@model unaideas7.Models.Qualificacao
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Qualificacao</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.data_hora_qualificacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.data_hora_qualificacao)
+                @Html.ValidationMessageFor(model => model.data_hora_qualificacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.obs_qualificacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.obs_qualificacao)
+                @Html.ValidationMessageFor(model => model.obs_qualificacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_professor, "id_professor", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_professor", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_professor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_projeto, "id_projeto", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_projeto", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_projeto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.valor_qualificacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.valor_qualificacao)
+                @Html.ValidationMessageFor(model => model.valor_qualificacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

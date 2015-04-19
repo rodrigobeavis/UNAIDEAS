@@ -23,7 +23,6 @@ namespace unaideas7.Models
         public DbSet<Professor> Professors { get; set; }
         public DbSet<Projeto> Projetoes { get; set; }
         public DbSet<Qualificacao> Qualificacaos { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<Turma> Turmas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
@@ -36,7 +35,6 @@ namespace unaideas7.Models
             modelBuilder.Configurations.Add(new ProfessorMap());
             modelBuilder.Configurations.Add(new ProjetoMap());
             modelBuilder.Configurations.Add(new QualificacaoMap());
-            modelBuilder.Configurations.Add(new sysdiagramMap());
             modelBuilder.Configurations.Add(new TurmaMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
         }

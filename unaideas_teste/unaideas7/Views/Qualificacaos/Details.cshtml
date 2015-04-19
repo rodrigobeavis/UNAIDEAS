@@ -1,0 +1,58 @@
+﻿@model unaideas7.Models.Qualificacao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Qualificacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Professor.email_professor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Professor.email_professor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Projeto.tipo_projeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Projeto.tipo_projeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data_hora_qualificacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data_hora_qualificacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obs_qualificacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obs_qualificacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor_qualificacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor_qualificacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_qualificacao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

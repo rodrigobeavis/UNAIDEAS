@@ -47,7 +47,7 @@ namespace unaideas7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_entidade_ensino,nome_entidade_ensino,descricao_entidade_ensino")] EntidadeDeEnsino entidadeDeEnsino)
+        public ActionResult Create([Bind(Include = "nome_entidade_ensino,descricao_entidade_ensino")] EntidadeDeEnsino entidadeDeEnsino)
         {
             if (ModelState.IsValid)
             {
